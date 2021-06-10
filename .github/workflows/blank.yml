@@ -91,8 +91,6 @@ jobs:
       - name: Artefacts
         if: ${{ always() }}
         uses: actions/download-artifact@v2
-        run: |
-          ls -lR $GITHUB_WORKSPACE
         with:
           name: resultats_tests_robotframework
           path: ${{ github.workspace }}/output
