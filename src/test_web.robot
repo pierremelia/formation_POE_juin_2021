@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    keywords.robot
+Resource    ../utils/keywords.robot
 
 *** Variables ***
 ${toto}    defaut

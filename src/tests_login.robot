@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    keywords.robot
+Resource    ../utils/keywords.robot
 
 Suite Setup    Log    Debut de la suite de tests
 Suite Teardown    Log    Fin de la suite de tests

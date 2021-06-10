@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    DataDriver    input_login.csv
-Library    library_python.py       
-Resource    keywords.robot
+Library    DataDriver    ../data/input_login.csv
+Library    ../utils/library_python.py       
+Resource    ../utils/keywords.robot
 
 Suite Setup    Log    Debut de la suite de tests
 Suite Teardown    Log    Fin de la suite de tests
