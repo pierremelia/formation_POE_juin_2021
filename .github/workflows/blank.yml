@@ -84,3 +84,8 @@ jobs:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/src
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/output
+      - name: Artefacts
+        uses: actions/download-artifact@v2
+        with:
+          name: resultats_tests_robotframework
+          path: ${{ github.workspace }}/output
