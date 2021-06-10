@@ -74,6 +74,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Initialisation (droits pour output/)
+        run: |
+          chmod -R 777 $GITHUB_WORKSPACE/output/
+          ls -l $GITHUB_WORKSPACE
       - name: Robot Framework
         uses: joonvena/robotframework-docker-action@v0.1
         env:
