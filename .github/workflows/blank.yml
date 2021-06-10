@@ -85,6 +85,7 @@ jobs:
           ROBOT_TESTS_DIR: ${{ github.workspace }}/src
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/output
       - name: Artefacts
+        if: ${{ success() }}
         uses: actions/download-artifact@v2
         with:
           name: resultats_tests_robotframework
