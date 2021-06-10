@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../utils/keywords.robot
+Test Teardown    Close Browser
 
 *** Variables ***
 ${toto}    defaut

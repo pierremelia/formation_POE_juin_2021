@@ -5,7 +5,7 @@ Resource    ../utils/keywords.robot
 Suite Setup    Log    Debut de la suite de tests
 Suite Teardown    Log    Fin de la suite de tests
 Test Setup    Keywords debut de test
-Test Teardown    Log    Fin du test
+Test Teardown    Close Browser
 Test Template    Mon template de test
 
 
