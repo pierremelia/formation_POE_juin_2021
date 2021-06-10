@@ -77,16 +77,22 @@ jobs:
       - name: Initialisation (droits pour output/)
         run: |
           chmod -R 777 $GITHUB_WORKSPACE/output/
-          ls -l $GITHUB_WORKSPACE
+          ls -lR $GITHUB_WORKSPACE
       - name: Robot Framework
         uses: joonvena/robotframework-docker-action@v0.1
         env:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/src2
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/output
+      - name: Before artefact
+        if: ${{ always() }}
+        run: |
+          ls -lR $GITHUB_WORKSPACE
       - name: Artefacts
         if: ${{ always() }}
         uses: actions/download-artifact@v2
+        run: |
+          ls -lR $GITHUB_WORKSPACE
         with:
           name: resultats_tests_robotframework
           path: ${{ github.workspace }}/output
