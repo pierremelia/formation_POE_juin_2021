@@ -1,0 +1,4 @@
+/libspecs/
+.project
+red.xml
+utils/__pycache__/

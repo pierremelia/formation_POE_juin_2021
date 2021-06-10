@@ -1,0 +1,6 @@
+${login};${password};${connexion_OK};${commentaire}
+admin;admin;1;"Login et Passwords corrects"
+adminee;admin;0;"Mauvais login"
+admin;adminee;0;"Mauvais mot de passe"
+admin;admin;1;"Encore Login et Password OK"
+adzazd;dazdzad;0;"Login et password pas bon du tout"
